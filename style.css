@@ -129,20 +129,25 @@ nav {
   position: relative;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: center;
+.hero-content-centered {
   text-align: center;
+  max-width: 800px;
 }
 
-@media (min-width: 768px) {
-  .hero-grid {
-    grid-template-columns: 1fr 1fr;
-    text-align: left;
-    gap: 3rem;
-  }
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn-secondary {
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+}
+
+.hero-btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
 }
 
 .hero-badge {
@@ -173,52 +178,7 @@ nav {
   margin-bottom: 2.5rem;
 }
 
-.hero-img-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-img-wrapper {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 8px solid rgba(255, 255, 255, 0.2);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  position: relative;
-  z-index: 2;
-}
-
-@media (min-width: 1024px) {
-  .hero-img-wrapper {
-    width: 400px;
-    height: 400px;
-  }
-}
-
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-decoration {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 110%;
-  height: 110%;
-  border: 2px dashed rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
+/* Removed hero image decoration styles */
 
 /* Services */
 .section-title {
@@ -278,6 +238,54 @@ nav {
 
 .service-card p {
   color: var(--text-muted);
+}
+
+.specialist-card {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.specialist-card h3 {
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.specialist-card p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.specialist-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.specialist-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.specialist-phone {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.specialist-phone:hover {
+  color: var(--white);
+  text-decoration: underline;
 }
 
 /* CTA Section */
@@ -344,16 +352,8 @@ footer {
     width: 100%;
   }
 
-  .hero-grid > div:first-child {
-    order: 2; /* Move text below image on mobile for better flow? Or keep text first? 
-                 User wants "experience better". Usually Image then headline is good, 
-                 but Headline then small image then CTA is very high conversion.
-                 Let's keep text first but move image above the CTA buttons if possible.
-                 Actually, I'll keep the image small and above the text for mobile. */
-  }
-  
-  .hero-img-container {
-    order: 1;
+  .hero-content-centered {
+    margin: 0 auto;
   }
 }
   /* Floating WhatsApp */

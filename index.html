@@ -27,25 +27,17 @@
 
     <main>
         <section class="hero">
-            <div class="container hero-grid">
-                <div>
-                    <span class="hero-badge">Consultoria Especializada</span>
-                    <h1>Sua tranquilidade com sua aposentadoria e imposto de renda começa aqui.</h1>
-                    <p>Especialista em Aposentadoria, Benefícios e Declaração de Imposto de Renda. Atendimento humanizado com quem entende do assunto.</p>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="https://wa.me/5511963095988?text=Olá%20João,%20gostaria%20de%20informações%20sobre%20meu%20Imposto%20de%20Renda." class="btn btn-accent">
-                            <i data-lucide="file-text"></i> Declarar Imposto de Renda
-                        </a>
-                        <a href="#servicos" class="btn" style="border: 1px solid rgba(255,255,255,0.3); color: white;">
-                             Ver serviços
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-img-container">
-                    <div class="hero-decoration"></div>
-                    <div class="hero-img-wrapper">
-                        <img src="/JOAO.png" alt="João Batista" class="hero-img">
-                    </div>
+            <div class="container hero-content-centered">
+                <span class="hero-badge">Consultoria Especializada</span>
+                <h1>Sua tranquilidade com sua aposentadoria e imposto de renda começa aqui.</h1>
+                <p>Especialista em Aposentadoria, Benefícios e Declaração de Imposto de Renda. Atendimento humanizado com quem entende do assunto.</p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/5511963095988?text=Olá%20João,%20gostaria%20de%20informações%20sobre%20meu%20Imposto%20de%20Renda." class="btn btn-accent">
+                        <i data-lucide="file-text"></i> Declarar Imposto de Renda
+                    </a>
+                    <a href="#servicos" class="btn hero-btn-secondary">
+                         Ver serviços
+                    </a>
                 </div>
             </div>
         </section>
@@ -97,10 +89,13 @@
                     <p>Garanta seu direito à vaga preferencial com a emissão simplificada do cartão de estacionamento gratuito.</p>
                 </div>
 
-                <div class="service-card" style="background: var(--primary); color: white;">
-                    <h3 style="color: white; margin-bottom: 1.5rem;">João Batista</h3>
-                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">Consultor especialista com anos de experiência em aposentadoria e declaração de renda.</p>
-                    <a href="tel:11963095988" style="color: var(--accent); font-weight: 800; font-size: 1.25rem; text-decoration: none;">(11) 96309-5988</a>
+                <div class="service-card specialist-card">
+                    <div class="specialist-avatar">
+                        <img src="/JOAO.png" alt="João Batista">
+                    </div>
+                    <h3>João Batista</h3>
+                    <p>Consultor especialista com anos de experiência em aposentadoria e declaração de renda.</p>
+                    <a href="tel:11963095988" class="specialist-phone">(11) 96309-5988</a>
                 </div>
             </div>
         </section>

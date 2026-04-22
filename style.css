@@ -109,15 +109,15 @@ nav {
 }
 
 .logo-img {
-  height: 100px; /* Reduced from original logo size for clarity */
-  width: auto;
+  display: none; /* Removed as it conflicted with brand name text */
 }
 
 .brand-name {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.025em;
   color: var(--primary);
+  text-transform: uppercase;
 }
 
 /* Hero Section */
@@ -132,13 +132,16 @@ nav {
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
   .hero-grid {
     grid-template-columns: 1fr 1fr;
+    text-align: left;
+    gap: 3rem;
   }
 }
 
@@ -177,8 +180,8 @@ nav {
 }
 
 .hero-img-wrapper {
-  width: 320px;
-  height: 320px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   border: 8px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
@@ -315,7 +318,45 @@ footer {
   margin-top: 2rem;
 }
 
-/* Floating WhatsApp */
+/* Global Mobile Overrides */
+@media (max-width: 767px) {
+  .nav-content {
+    justify-content: center;
+  }
+  
+  .nav-content .btn {
+    display: none; /* Keep header clean on mobile */
+  }
+
+  .section-padding {
+    padding: 3rem 0;
+  }
+
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-grid > div:first-child {
+    order: 2; /* Move text below image on mobile for better flow? Or keep text first? 
+                 User wants "experience better". Usually Image then headline is good, 
+                 but Headline then small image then CTA is very high conversion.
+                 Let's keep text first but move image above the CTA buttons if possible.
+                 Actually, I'll keep the image small and above the text for mobile. */
+  }
+  
+  .hero-img-container {
+    order: 1;
+  }
+}
+  /* Floating WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 2rem;
